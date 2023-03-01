@@ -1,0 +1,15 @@
+import os, time
+import pyautogui as pag
+
+try:
+    while True:
+        print("按下Ctrl + C 结束程序")
+        # pag.position()返回鼠标的坐标
+        x, y = pag.position()
+        print(x)
+        print(y)
+        time.sleep(1)
+        os.system('cls')
+# 捕获异常 KeyboardInterrupt:用户中断执行(通常是输入^C)
+except KeyboardInterrupt:
+    print('已退出')
